@@ -4,7 +4,7 @@ module ModMul_Montgomery(
 	input [16:0]A,
 	input [16:0]B,
 	input [16:0]Q,
-	output reg [79:0]C
+	output reg [79:0]C //Output
 );
 	//Internal Registers
 	reg [16:0]q, q_inv;
@@ -13,6 +13,7 @@ module ModMul_Montgomery(
 	reg [79:0]u, c_m;
 	wire [16:0]r_inv, q1;
 
+	//Value Assignment
 	initial begin
 		q=Q;
 	end
@@ -26,7 +27,7 @@ module ModMul_Montgomery(
 	
 	alg_1 t2( .clk(clk), .reset(reset), .a(q), .b(r), .c(q1));
 	
-	
+	//Calculations
 	always @(posedge clk or posedge reset) begin
 		if(reset) begin
 			A_m <= 0;
