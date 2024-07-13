@@ -1,0 +1,1 @@
+Post Quantum Cryptography(PQC) includes lattice-based cryptographic algorithms among which Crystal-Kyber algorithm is prominent. Crystal-Kyber stands on polynomial multiplication with high-degrees, these multiplications are not feasible by traditional methods hence we use Number Theoretic Transform(NTT) to achieve the necessary.
