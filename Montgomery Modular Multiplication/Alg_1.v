@@ -5,14 +5,16 @@ module alg_1(
 	input reset,
 	input [16:0]a,
 	input [16:0]b,
-	output reg [16:0]c
+	output reg [16:0]c //Output
 );
+	//Internal Registers
 	reg [16:0]w = 0;
 	reg [16:0]q;
 	reg [16:0]r;
 	integer i=1;
 	integer m=0;
 
+	//Calculations
 	always@(posedge clk or posedge reset) begin
 		q = a;
 		r = b;
